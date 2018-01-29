@@ -1,0 +1,24 @@
+{
+  "name": "hb-multipage-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milenacard/hb-multipage-site.git"
+  },
+  "author": "Milena Cardenas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/milenacard/hb-multipage-site/issues"
+  },
+  "homepage": "https://github.com/milenacard/hb-multipage-site#readme",
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "node-sass": "^4.7.2",
+    "webpack": "^3.10.0"
+  }
+}
