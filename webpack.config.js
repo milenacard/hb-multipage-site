@@ -1,5 +1,6 @@
 const webpack = require('webpack')
 const path = require('path')
+var StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
   entry: './src/main.js',
@@ -16,10 +17,11 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         options: {
           error: false,
-          snazzy: true,
-          parser: 'stylelint'
+          snazzy: true
         }
       }]
-  }
-
+  },
+  plugins: [
+    new StyleLintPlugin({})
+  ]
 }
