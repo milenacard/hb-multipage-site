@@ -1,7 +1,7 @@
 # hb-multipage-site
 This exercise will help you to have a better understanding of the correct structure of a web project.
 
-## **Rules**
+## Rules
 In this exercise you should separate the user interface from any kind of business logic. For this you can use separate modules that are connected using dependencies (import and export).
 
 Take into consideration the following global rules for all components / features:
@@ -15,12 +15,13 @@ Take into consideration the following global rules for all components / features
     - Medium: 640px - 1023px
     - Large: 1024px - Inf
 
-## **Components**
+## Components
 
-### **Main Menu**
+### Main Menu
 This component should be present on every page since it is a global component that helps the user to navigate between different pages.
 
 Data Structure
+```
 {
   "logo": {
     "img": "",
@@ -42,8 +43,9 @@ Data Structure
     }
   ]
 }
+```
 
-## **User Interactions**
+## User Interactions
 - Hamburguer Icon (Small and Medium):
     - Clicking should display or hide the menu depending on the current state.
 - Main Logo:
