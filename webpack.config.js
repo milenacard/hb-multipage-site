@@ -1,7 +1,8 @@
 const path = require('path')
-var StyleLintPlugin = require('stylelint-webpack-plugin')
+// var StyleLintPlugin = require('stylelint-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
   entry: './src/main.js',
@@ -30,14 +31,26 @@ module.exports = {
             'sass-loader?sourceMap'
           ]
         })
+      },
+      {
+        test: /\.pug$/,
+        loader: 'pug-loader'
       }
     ]
   },
   plugins: [
-    new StyleLintPlugin({}),
+    // new StyleLintPlugin({}),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     }),
-    new ExtractTextPlugin('styles.css')
+    new ExtractTextPlugin('styles.css'),
+    new UglifyJsPlugin({
+      uglifyOptions: {
+        beautify: false,
+        ecma: 6,
+        compress: true,
+        comments: false
+      }
+    })
   ]
 }
