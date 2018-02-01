@@ -1,11 +1,10 @@
 const path = require('path')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const StyleLintPlugin = require('stylelint-webpack-plugin')
 
 module.exports = {
   entry: './src/main.js',
-  devtool: 'inline-source-map',
   output: {
     filename: './bundle.js',
     path: path.resolve(__dirname, 'public')
@@ -23,32 +22,22 @@ module.exports = {
         }
       },
       {
-        test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          use: [
-            'css-loader',
-            'sass-loader?sourceMap'
-          ]
-        })
-      },
-      {
         test: /\.pug$/,
         loader: 'pug-loader'
       }
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(['public']),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     }),
-    new ExtractTextPlugin('styles.css'),
-    new UglifyJsPlugin({
-      uglifyOptions: {
-        beautify: false,
-        ecma: 6,
-        compress: true,
-        comments: true
-      }
+    new StyleLintPlugin({
+      configFile: '.stylelintrc',
+      context: 'src',
+      files: '**/*.scss',
+      failOnError: false,
+      quiet: false
     })
   ]
 }
