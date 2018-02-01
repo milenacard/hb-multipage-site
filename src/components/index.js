@@ -5,10 +5,10 @@ import './index.scss'
 export class Index {
   constructor (node) {
     this.node = node
-    this.insertNode(this.node)
+    this.insertStringToHTML(this.node)
   }
 
-  insertNode (node) {
+  insertStringToHTML (node) {
     node.innerHTML = template(data)
   }
 }

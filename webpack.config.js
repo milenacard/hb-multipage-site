@@ -1,5 +1,4 @@
 const path = require('path')
-// var StyleLintPlugin = require('stylelint-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
@@ -39,7 +38,6 @@ module.exports = {
     ]
   },
   plugins: [
-    // new StyleLintPlugin({}),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     }),
@@ -49,7 +47,7 @@ module.exports = {
         beautify: false,
         ecma: 6,
         compress: true,
-        comments: false
+        comments: true
       }
     })
   ]
