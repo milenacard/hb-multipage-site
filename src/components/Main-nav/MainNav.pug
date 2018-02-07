@@ -1,13 +1,14 @@
 section.main-menu__container
-  div.main-menu__logo-container
-    img.logo-image(src=logo.link, alt=logo.img)
-  div.main-menu__hamburger
-    div.main-menu__hamburger-first
-    div.main-menu__hamburger-middle
-    div.main-menu_hamburger-last
+  div.main-menu__nav-bar
+    div.main-menu__logo-container
+      img.main-menu__logo-image(src=logo.link, alt=logo.img)
+    div.main-menu__hamburger
+      div.main-menu__hamburger-line
+      div.main-menu__hamburger-line
+      div.main-menu__hamburger-line
   ul.main-menu__list
     each element in links
-      if Object.keys(element).include('href')
+      if Object.keys(element).includes('href')
         div
           li.main-menu__list-item
             a(href = element.href) #{element.label}
