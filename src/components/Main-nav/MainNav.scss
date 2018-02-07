@@ -14,11 +14,6 @@
 	}
 
 	&__logo{
-		&-container{
-			width: 100%;
-			//background: gray;
-		}
-
 		&-image{
 			width: 50px;
 			height: 50px;
@@ -44,6 +39,37 @@
 			background: black;
 			border-radius: 2px;
 			margin: 4px;
+
+			&-first{
+				top: 0px;
+				transform-origin: left center;
+			}
+
+			&-middle{
+				top: 18px;
+				transform-origin: left center;
+			}
+
+			&-last{
+				top: 36px;
+				transform-origin: left center;
+			}
+		}
+
+		&--clicked{
+			.main-menu__hamburger-line-first{
+				top: 18px;
+				transform: rotate(33deg);
+			}
+
+			.main-menu__hamburger-line-middle{
+				opacity: 0;
+			}
+
+			.main-menu__hamburger-line-last{
+				top: 18px;
+				transform: rotate(-32deg);			
+			}
 		}
 
 		&:hover .main-menu__hamburger-line{

@@ -1,23 +1,21 @@
-section.main-menu__container
-  div.main-menu__nav-bar
-    div.main-menu__logo-container
-      img.main-menu__logo-image(src=logo.link, alt=logo.img)
-    div.main-menu__hamburger
-      div.main-menu__hamburger-line
-      div.main-menu__hamburger-line
-      div.main-menu__hamburger-line
-  ul.main-menu__list
-    each element in links
-      if Object.keys(element).includes('href')
-        div
-          li.main-menu__list-item
-            a(href = element.href) #{element.label}
-      else
-        div.main-menu__list-container
-          li.main-menu__list-item #{element.label}
-            ul.main-menu__list__link
-              each subelement in element.links
-                li.main-menu__list__link-item
-                  a(href = subelement.href) #{subelement.label}
+div.main-menu__nav-bar
+  img.main-menu__logo-image(src=logo.link, alt=logo.img)
+  div.main-menu__hamburger
+    .main-menu__hamburger-line.main-menu__hamburger-line-first
+    div.main-menu__hamburger-line.main-menu__hamburger-line-middle
+    div.main-menu__hamburger-line.main-menu__hamburger-line-last
+ul.main-menu__list
+  each element in links
+    if Object.keys(element).includes('href')
+      div
+        li.main-menu__list-item
+          a(href = element.href) #{element.label}
+    else
+      div.main-menu__list-container
+        li.main-menu__list-item #{element.label}
+          ul.main-menu__list__link
+            each subelement in element.links
+              li.main-menu__list__link-item
+                a(href = subelement.href) #{subelement.label}
 
         
