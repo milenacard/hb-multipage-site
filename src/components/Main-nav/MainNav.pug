@@ -5,17 +5,18 @@ div.main-menu__nav-bar
     div.main-menu__hamburger-line.main-menu__hamburger-line-middle
     div.main-menu__hamburger-line.main-menu__hamburger-line-last
 ul.main-menu__list
-  each element in links
-    if Object.keys(element).includes('href')
-      div
+    each element in links
+      if Object.keys(element).includes('href')
         li.main-menu__list-item
-          a(href = element.href) #{element.label}
-    else
-      div.main-menu__list-container
-        li.main-menu__list-item #{element.label}
-          ul.main-menu__list__link
-            each subelement in element.links
-              li.main-menu__list__link-item
-                a(href = subelement.href) #{subelement.label}
-
+          a(href = element.href) #{element.label} 
+      else
+        div.main-menu__list-item-container
+          li.main-menu__list-item #{element.label}
+            ul.main-menu__list__link
+              each subelement in element.links
+                li.main-menu__list__item-link
+                  a(href = subelement.href) #{subelement.label}  
         
+  
+
+          
