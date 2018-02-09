@@ -19,7 +19,13 @@ export class MainNav {
     this.element.hamburger = this.element.navBar.querySelector('.main-menu__hamburger')
     this.element.hamburger.addEventListener('click', () => {
       this.element.hamburger.classList.toggle('main-menu__hamburger--clicked')
+      this.showList()
     })
+  }
+
+  showList () {
+    this.element.list = this.node.querySelector('.main-menu__list')
+    this.element.list.classList.toggle('main-menu__list--activate')
   }
 }
 

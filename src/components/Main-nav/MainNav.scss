@@ -87,10 +87,20 @@
 	&__list{
 		width: 100%;
 		background: $mainNav;
-		position: absolute;
+		position: relative;
 		top: 8.5%;
 		left: 0%;
 		font-size: 30px;
 		padding: 10px;
+		display: none;
+		overflow: auto;
+
+		& a:hover{
+			background-color: #ddd;
+		}
+
+		&--activate{
+			display: inline-block;
+		}
 	}
 }
