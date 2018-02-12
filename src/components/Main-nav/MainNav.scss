@@ -29,9 +29,9 @@
 
 	&__hamburger{
 		display: block;
-		width: 45px;
-		height: 35px;
 		position: absolute;
+		border: none;
+		background: rgb(214, 210, 210);
 		top: 20%;
 		left: 2%;
 
@@ -88,11 +88,11 @@
 		width: 100%;
 		background: $mainNav;
 		position: relative;
-		top: 8.5%;
-		left: 0%;
+		top: -108.5%;
+		left: 0;
+		//left:-100%;
 		font-size: 30px;
 		padding: 10px;
-		display: none;
 		overflow: auto;
 
 		& a:hover{
@@ -100,7 +100,9 @@
 		}
 
 		&--activate{
-			display: inline-block;
+			transition: 0.8s ease-out;
+			top: 8.5%;
+			//left: 0;
 		}
 	}
 }
