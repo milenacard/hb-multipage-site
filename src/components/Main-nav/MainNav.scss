@@ -31,7 +31,7 @@
 		display: block;
 		position: absolute;
 		border: none;
-		background: rgb(214, 210, 210);
+		background-color: transparent;
 		top: 20%;
 		left: 2%;
 
@@ -69,8 +69,8 @@
 			}
 
 			.main-menu__hamburger-line-first{
-				top: 18px;
-				transform: rotate(33deg);
+				width: 37px;
+				transform: rotate(31deg);
 			}
 
 			.main-menu__hamburger-line-middle{
@@ -78,8 +78,8 @@
 			}
 
 			.main-menu__hamburger-line-last{
-				top: 18px;
-				transform: rotate(-32deg);			
+				width: 37px;
+				transform: rotate(-30deg);			
 			}
 		}
 	}
@@ -88,21 +88,40 @@
 		width: 100%;
 		background: $mainNav;
 		position: relative;
+		transition: 1s ease-in-out;
 		top: -108.5%;
 		left: 0;
-		//left:-100%;
-		font-size: 30px;
+		font-size: 23px;
 		padding: 10px;
 		overflow: auto;
+		text-align: left;
 
 		& a:hover{
 			background-color: #ddd;
 		}
 
 		&--activate{
-			transition: 0.8s ease-out;
+			transition: 1s ease-in-out;
 			top: 8.5%;
-			//left: 0;
+		}
+
+		&-item-button{
+			width: 100%;
+			background-color: transparent;
+			font-size: 23px;
+			border: none;
+			text-align: left;
+			padding: 0;
+
+		
+		}
+
+		&__link{
+			background: red;
+			
+			&--activate{
+				height: auto;
+			}
 		}
 	}
 }

@@ -10,7 +10,7 @@ ul.main-menu__list
         li.main-menu__list-item
           a(href = element.href) #{element.label} 
       else
-        div.main-menu__list-item-container
+        button.main-menu__list-item-button
           li.main-menu__list-item #{element.label}
             ul.main-menu__list__link
               each subelement in element.links
