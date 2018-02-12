@@ -5,14 +5,6 @@
   },
   "links": [
     {
-      "label": "Home",
-      "href": "/"
-    },
-    {
-      "label": "About us",
-      "href": "/"
-    },
-    {
       "label": "Our Menu",
       "links": [
         {
@@ -62,6 +54,14 @@
           "href": ""
         }
       ]
+    },
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "About us",
+      "href": "/"
     }
   ]
 }

@@ -9,7 +9,7 @@ export class MainNav {
     this.insertHTML(this.node)
     this.setContainer()
     this.setEventHamburger()
-    // this.showItem()
+    this.setEventListButton()
   }
 
   insertHTML (node) {
@@ -19,7 +19,9 @@ export class MainNav {
   setContainer () {
     this.elements.navBar = this.node.querySelector('.main-menu__nav-bar')
     this.elements.list = this.node.querySelector('.main-menu__list')
-    this.elements.itemButton = this.elements.list.querySelector('.main-menu__list-item-button')
+    this.elements.listItem = this.elements.list.querySelector('.main-menu__list-item')
+    this.elements.itemButtons = this.elements.list.querySelectorAll('.main-menu__list-item-button')
+    this.elements.listLinks = this.elements.list.querySelectorAll('.main-menu__list__link')
   }
 
   setEventHamburger () {
@@ -34,13 +36,20 @@ export class MainNav {
     this.elements.list.classList.toggle('main-menu__list--activate')
   }
 
-/*   showItem () {
-    this.elements.listItem = this.elements.itemButton.querySelector('.main-menu__list-item')
-    this.elements.listLink = this.elements.listItem.querySelector('.main-menu__list__link')
-    this.elements.itemButton.addEventListener('clic', () => {
-      this.elements.listLink.classList.toggle('main-menu__list__link--activate')
+  setEventListButton () {
+    this.elements.itemButtons.forEach(element => {
+      element.addEventListener('click', this.showItem)
     })
-  } */
+  }
+
+  showItem () {
+    this.elements.listLinks.forEach(element => {
+      console.log(element)
+      element.addEventListener('click', () => {
+        element.classList.toggle('.main-menu__list__link--activate')
+      })
+    })
+  }
 }
 
 export default MainNav
