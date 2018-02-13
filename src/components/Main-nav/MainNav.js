@@ -9,7 +9,7 @@ export class MainNav {
     this.insertHTML(this.node)
     this.setContainer()
     this.setEventHamburger()
-    this.setEventListButton()
+    this.setEventlist()
   }
 
   insertHTML (node) {
@@ -36,19 +36,21 @@ export class MainNav {
     this.elements.list.classList.toggle('main-menu__list--activate')
   }
 
-  setEventListButton () {
-    this.elements.itemButtons.forEach(element => {
-      element.addEventListener('click', this.showItem)
-    })
+  setEventlist () {
+    this.elements.list.addEventListener('click', this.setEventListButton.bind(this))
   }
 
-  showItem () {
-    this.elements.listLinks.forEach(element => {
-      console.log(element)
-      element.addEventListener('click', () => {
-        element.classList.toggle('.main-menu__list__link--activate')
-      })
-    })
+  setEventListButton (event) {
+    const clickElement = event.target
+    if (clickElement.classList.contains('main-menu__list-item-button')) {
+      const index = Array.from(this.elements.itemButtons).indexOf(clickElement)
+      this.showItem(index)
+    }
+  }
+
+  showItem (index) {
+    console.log(this.elements.listLinks[index])
+    this.elements.listLinks[index].classList.toggle('main-menu__list__link--activate')
   }
 }
 
