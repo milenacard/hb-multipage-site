@@ -11,7 +11,6 @@
 
 	&__nav-bar{
 		width: 100%;
-		//background: rgb(214, 210, 210);
 		background: black;
 		position: absolute;
 		z-index: 1;
@@ -104,13 +103,9 @@
 		overflow: auto;
 		text-align: left;
 
-		& a:hover{
-			background-color: #ddd;
-		}
-
 		&--activate{
 			top: 50px;
-			height: 600px;
+			height: 800px;
 			transition: 1s ease-in-out;
 		}
 
@@ -118,12 +113,11 @@
 			width: 100%;
 			z-index: 1;
 			background-color: $mainNav;
-			margin: 2px;
+			padding-top: 10px;
 		}
 
 		&__item-link{
 			margin: 20px;
-
 		}
 
 		&__subitem-link{
@@ -135,9 +129,10 @@
 		}
 
 		&__link-item{
-			margin-left: 10px;
+			width: 100%;
+			margin-left: 20px;
 			text-decoration: none;
-			color: red;
+			color: white;
 		}
 
 		&-item-button{
@@ -149,9 +144,13 @@
 			text-align: left;	
 			border-bottom: 1px solid black;
 			padding: 15px;
+			color: #ddd;
+			padding-top: 30px;
+    	padding-bottom: 30px;
 
 			&:hover{
-				background: rgb(224, 81, 25);
+				color: black;
+				background-color: #ddd;
 			}
 		}
 		
@@ -164,7 +163,7 @@
 			
 			&--activate{
 				height: 195px;
-				background-color: transparent;
+				background-color: #454747;
 			}
 		}
 	}
