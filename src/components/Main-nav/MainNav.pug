@@ -9,14 +9,14 @@ ul.main-menu__list
     each element in links
       if Object.keys(element).includes('href')
         li.main-menu__list-item
-          a(href = element.href) #{element.label} 
+          a.main-menu__list__link-item(href = element.href) #{element.label} 
       else
         li.main-menu__list-item 
           button.main-menu__list-item-button #{element.label}
           ul.main-menu__list__link
             each subelement in element.links
               li.main-menu__list__item-link
-                a(href = subelement.href) #{subelement.label}  
+                a.main-menu__list__subitem-link(href = subelement.href) #{subelement.label}  
         
   
 

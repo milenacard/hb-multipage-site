@@ -11,7 +11,8 @@
 
 	&__nav-bar{
 		width: 100%;
-		background: rgb(214, 210, 210);
+		//background: rgb(214, 210, 210);
+		background: black;
 		position: absolute;
 		z-index: 1;
 	}
@@ -21,7 +22,7 @@
 		&-container{
 			position: absolute;
 			text-align: center;
-			top: 0;
+			top: 2px;
 			left: 50%;
 		}
 		&-image{
@@ -40,11 +41,11 @@
 		border: none;
 		background-color: transparent;
 		padding: 0;
-		top: 3px;
-		left: 5px;
+		top: 4px;
+		left: 20px;
 
 		&:focus{
-			border: 1px solid red;
+			border: 0.3px solid yellow;
 		}
 
 		&-line{
@@ -53,7 +54,7 @@
 			height: 5px;
 			top: 2px;
 			left: 2px;
-			background: black;
+			background: white;
 			border-radius: 2px;
 			margin: 2px;
 
@@ -99,7 +100,7 @@
 		position: relative;
 		transition: 1s ease-in-out;
 		top: 0;
-		font-size: 30px;
+		font-size: 40px;
 		overflow: auto;
 		text-align: left;
 
@@ -109,7 +110,7 @@
 
 		&--activate{
 			top: 50px;
-			height: auto;
+			height: 600px;
 			transition: 1s ease-in-out;
 		}
 
@@ -117,19 +118,41 @@
 			width: 100%;
 			z-index: 1;
 			background-color: $mainNav;
-			margin-left: 2px;
+			margin: 2px;
+		}
 
-			&:hover{
-					background: rgb(224, 81, 25);
-			}
+		&__item-link{
+			margin: 20px;
+
+		}
+
+		&__subitem-link{
+			width: 100%;
+			text-decoration: none;
+			color: black;
+			font-size: 35px;
+			margin: 10px; 
+		}
+
+		&__link-item{
+			margin-left: 10px;
+			text-decoration: none;
+			color: red;
 		}
 
 		&-item-button{
 			width: 100%;
+			height: 100%;
 			background-color: transparent;
-			font-size: 30px;
+			font-size: 40px;
 			border: none;
-			text-align: left;		
+			text-align: left;	
+			border-bottom: 1px solid black;
+			padding: 15px;
+
+			&:hover{
+				background: rgb(224, 81, 25);
+			}
 		}
 		
 		&__link{
@@ -137,16 +160,12 @@
 			will-change: height;
 			overflow: hidden;
 			height: 0;
-			margin-left: 20px;
-			transition: height .3s ease-in-out;
+			transition: height 1s ease-in-out;
 			
 			&--activate{
-				height: auto;
+				height: 195px;
+				background-color: transparent;
 			}
-		}
-
-		&__item-link{
-			text-decoration: none;
 		}
 	}
 }
