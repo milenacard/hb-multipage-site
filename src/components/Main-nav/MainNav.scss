@@ -13,7 +13,7 @@
 		width: 100%;
 		background: black;
 		position: absolute;
-		z-index: 1;
+		z-index: 3;
 	}
 
 	&__logo{
@@ -111,37 +111,47 @@
 			transition: 1s ease-in-out;
 		}
 
+		&__item-link{
+			&:hover{
+				background: rgb(185, 185, 185);
+			}		
+		}
+
 		&-item{
 			width: 100%;
 			z-index: 1;
-			background-color: $mainNav;
-			padding-top: 10px;
-		}
-
-		&__item-link{
-			margin: 20px;
+			background-color: $mainNav;	
 		}
 
 		&__subitem-link{
 			width: 100%;
+			height: 100%;
+			display: block;
 			text-decoration: none;
 			color: black;
-			font-size: 35px;
-			margin: 10px; 
+			font-size: 30px;
+			padding-top: 20px;
+			text-align: center;
+			margin: 0;
 		}
 
 		&__link-item{
 			width: 100%;
-			margin-left: 20px;
+			display: block;
+			padding-left: 20px;
 			text-decoration: none;
 			color: white;
+
+			&:hover{
+				background: rgb(185, 185, 185);
+			}	
 		}
 
 		&-item-button{
 			width: 100%;
 			height: 100%;
 			background-color: transparent;
-			font-size: 40px;
+			font-size: 35px;
 			border: none;
 			text-align: left;	
 			border-bottom: 1px solid black;
@@ -158,14 +168,15 @@
 		
 		&__link{
 			width: 100%;
+			background-color: #454747;
 			will-change: height;
 			overflow: hidden;
 			height: 0;
-			transition: height 1s ease-in-out;
+			max-height: 500px;
+			transition: max-height 1s ease-in-out;
 			
 			&--activate{
-				height: 195px;
-				background-color: #454747;
+				height: auto;
 			}
 		}
 	}
