@@ -10,7 +10,7 @@
 
 		@include large{
 			width: 100%;
-			height: 40vh;
+			height: 30vh;
 			//background: #f9c833;∫
 			background: #c21500;  /* fallback for old browsers */
 			background: -webkit-linear-gradient(left, #ffc500, #c21500);  /* Chrome 10-25, Safari 5.1-6 */
@@ -162,7 +162,7 @@
 		&-item{
 			width: 100%;
 			z-index: 1;
-			background: #ddd;	
+			//background: #ddd;	
 		}
 
 		&__subitem-link{
@@ -175,6 +175,12 @@
 			padding-top: 20px;
 			text-align: center;
 			margin: 0;
+
+			@include large{
+				height: unset;
+				text-align: left;
+				display: unset;
+			}
 		}
 
 		&__link-item{
@@ -187,6 +193,11 @@
 			&:hover{
 				color:#d5392e;
 				background-color: rgb(156, 152, 152);
+
+				@include large{
+					color: #ddd;
+					background-color: unset;
+				}
 			}	
 		}
 
@@ -230,6 +241,7 @@
 
 				@include large{
 					position: fixed;
+					width: 288px;
 				}
 			}
 		}
