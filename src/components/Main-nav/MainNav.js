@@ -10,6 +10,7 @@ export class MainNav {
     this.setContainer()
     this.setEventHamburger()
     this.setEventlist()
+    this.currentListButton = null
   }
 
   insertHTML (node) {
@@ -19,7 +20,7 @@ export class MainNav {
   setContainer () {
     this.elements.navBar = this.node.querySelector('.main-menu__nav-bar')
     this.elements.list = this.node.querySelector('.main-menu__list')
-    this.elements.listItem = this.elements.list.querySelector('.main-menu__list-item')
+    this.elements.listItems = this.elements.list.querySelectorAll('.main-menu__list-item')
     this.elements.itemButtons = this.elements.list.querySelectorAll('.main-menu__list-item-button')
     this.elements.listLinks = this.elements.list.querySelectorAll('.main-menu__list__link')
   }
@@ -36,21 +37,29 @@ export class MainNav {
     this.elements.list.classList.toggle('main-menu__list--activate')
   }
 
-  setEventlist () {
-    this.elements.list.addEventListener('click', this.setEventListButton.bind(this))
-  }
-
-  setEventListButton (event) {
-    const clickElement = event.target
-    if (clickElement.classList.contains('main-menu__list-item-button')) {
-      const index = Array.from(this.elements.itemButtons).indexOf(clickElement)
-      this.showItem(index)
-    }
-  }
-
   showItem (index) {
-    console.log(this.elements.listLinks[index])
     this.elements.listLinks[index].classList.toggle('main-menu__list__link--activate')
+  }
+
+  setEventlist () {
+    this.elements.itemButtons.forEach(element => {
+      element.addEventListener('click', () => {
+        const index = Array.from(this.elements.itemButtons).indexOf(element)
+        if (this.currentListButton === null) {
+          console.log('esta es la primera vez ')
+          this.currentListButton = index
+        }
+        if (index === this.currentListButton) {
+          console.log('esta es al repetir ')
+          this.elements.listLinks[this.currentListButton].classList.toggle('main-menu__list__link--activate')
+        } else {
+          console.log('esta es al ser diferentes ')
+          this.elements.listLinks[this.currentListButton].classList.remove('main-menu__list__link--activate')
+          this.elements.listLinks[index].classList.add('main-menu__list__link--activate')
+          this.currentListButton = index
+        }
+      })
+    })
   }
 }
 

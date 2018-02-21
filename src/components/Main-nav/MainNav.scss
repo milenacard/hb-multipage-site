@@ -10,8 +10,9 @@
 
 		@include large{
 			width: 100%;
-			height: 30vh;
-			//background: #f9c833;∫
+			height: 100px;
+			position: relative;
+			//background: #f9c833;
 			background: #c21500;  /* fallback for old browsers */
 			background: -webkit-linear-gradient(left, #ffc500, #c21500);  /* Chrome 10-25, Safari 5.1-6 */
 			background: linear-gradient(to left, #ffc500, #c21500); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -31,6 +32,8 @@
 		@include large{
 			display: block;
 			background: unset;
+			width: 150px;
+			height: 100%;
 		}
 	}
 
@@ -45,6 +48,8 @@
 				position: unset;
 				text-align: unset;
 				margin-left: 50px;
+				width: 100px;
+				height: 100px;
 			}
 		}
 		
@@ -54,6 +59,11 @@
 			margin: 0 auto;
 			top: 0;
 			left: 0;
+
+			@include large{
+				width: 100%;
+				height: 100%;
+			}
 		}
 	}
 
@@ -101,7 +111,7 @@
 		&--clicked{
 			.main-menu__hamburger-line{
 				background: #f9c833;
-				transition: 0.4s ease-in-out;
+				transition: 400ms linear;
 			}
 
 			.main-menu__hamburger-line-first{
@@ -127,7 +137,7 @@
 		height: 0;
 		background-color: #ddd;
 		position: relative;
-		transition: 1s ease-in-out;
+		transition: 400ms linear;
 		top: 0;
 		font-size: 40px;
 		overflow: auto;
@@ -137,18 +147,16 @@
 			top: 50px;
 			width: 100%;
 			height: 800px;
-			transition: 1s ease-in-out;
 		}
 
 		@include large{
 			flex-direction: row;
 			background-color: unset;
-			position: relative;
-			top: 50px;
-			margin-left: 0;
-			min-height: 0;
-			width: 100%;
-			height: 100px;
+			position: absolute;
+			top: 0;
+			padding-left: 150px;
+			width: 85%;
+			height: 100%;
 			font-size: 25px;
 			transition: unset;
 		}
@@ -156,7 +164,7 @@
 		&__item-link{
 			&:hover{
 				background-color: rgb(156, 152, 152);
-			}		
+			}	
 		}
 
 		&-item{
@@ -193,10 +201,15 @@
 			&:hover{
 				color:#d5392e;
 				background-color: rgb(156, 152, 152);
+			}
 
-				@include large{
+			@include large{
+				margin-top: 11%;
+
+				&:hover{
 					color: #ddd;
 					background-color: unset;
+					text-decoration: underline;
 				}
 			}	
 		}
@@ -224,24 +237,28 @@
 				font-size: 20px;
 				text-align: center;
 				padding: 0;
+				&:hover{
+					background-color: unset;
+					color: white;
+				}
 			}
 		}
 		
 		&__link{
 			width: 100%;
 			background-color: rgb(185, 185, 185);
-			will-change: height;
+			will-change: max-height;
 			overflow: hidden;
 			height: auto;
 			max-height: 0;
-			transition: max-height .6s ease-in-out;
+			transition: max-height 400ms linear;
 			
 			&--activate{
 				max-height: 500px;
 
 				@include large{
 					position: fixed;
-					width: 288px;
+					width: 244px;
 				}
 			}
 		}

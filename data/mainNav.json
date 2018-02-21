@@ -1,67 +1,69 @@
 {
-  "logo": {
-    "img": "McDonals",
-    "link": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Mcdonalds-90s-logo.svg"
-  },
-  "links": [
-    {
-      "label": "Our Menu",
-      "links": [
-        {
-          "label": "Burgers",
-          "href": "burger.html"
-        },
-        {
-          "label": "Drinks and desserts",
-          "href": "drink.html"
-        },
-        {
-          "label": "In Family",
-          "href": "family.html"
-        }
-      ]
+  "mainNav": {
+    "logo": {
+      "img": "McDonals",
+      "link": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Mcdonalds-90s-logo.svg"
     },
-    {
-      "label": "About our food",
-      "links": [
-        {
-          "label": "Commitment to Quality",
-          "href": "Aboutfood1.html"
-        },
-        {
-          "label": "Quality food",
-          "href": "aboutfood2.html"
-        },
-        {
-          "label": "Our food philosophy",
-          "href": "aboutfood3.html"
-        }
-      ]
-    },
-    {
-      "label": "Company",
-      "links": [
-        {
-          "label": "Opportunities",
-          "href": ""
-        },
-        {
-          "label": "Work in local",
-          "href": ""
-        },
-        {
-          "label": "Work in office",
-          "href": ""
-        }
-      ]
-    },
-    {
-      "label": "Home",
-      "href": "/"
-    },
-    {
-      "label": "About us",
-      "href": "/"
-    }
-  ]
+    "links": [
+      {
+        "label": "Our Menu",
+        "links": [
+          {
+            "label": "Burgers",
+            "href": "burger.html"
+          },
+          {
+            "label": "Drinks and desserts",
+            "href": "drink.html"
+          },
+          {
+            "label": "In Family",
+            "href": "family.html"
+          }
+        ]
+      },
+      {
+        "label": "About our food",
+        "links": [
+          {
+            "label": "Commitment to Quality",
+            "href": "Aboutfood1.html"
+          },
+          {
+            "label": "Quality food",
+            "href": "aboutfood2.html"
+          },
+          {
+            "label": "Our food philosophy",
+            "href": "aboutfood3.html"
+          }
+        ]
+      },
+      {
+        "label": "Company",
+        "links": [
+          {
+            "label": "Opportunities",
+            "href": ""
+          },
+          {
+            "label": "Work in local",
+            "href": ""
+          },
+          {
+            "label": "Work in office",
+            "href": ""
+          }
+        ]
+      },
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "About us",
+        "href": "/"
+      }
+    ]
+  }
 }
