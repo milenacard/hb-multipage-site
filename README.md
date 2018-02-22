@@ -55,3 +55,36 @@ Data Structure
         - Follow the provided link, if the link doesn't have a second level of links.
         - Display the second level of links if they were provided.
     - Hovering on a link should change it's visible state.
+
+### Hero (Content Images)
+This component can be included on any page and should include images that should be treated as content instead of decorative images, meaning that you need to implement it using picture tags instead of setting the image as a background using CSS.
+
+Data Structure
+```
+{
+  "header": "",
+  "description": "",
+  "cta": {
+    "label": "",
+    "url": ""
+  },
+  "images": {
+    "small": {
+      "url": "",
+      "description": ""
+    },
+    "medium": {
+      "url": "",
+      "description": ""
+    },
+    "large": {
+      "url": "",
+      "description": ""
+    }
+  }
+}
+```
+
+
+## User Interactions
+- The user can click the CTA to be redirected to the provided URL.
