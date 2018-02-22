@@ -1,1 +1,69 @@
-{"name": "Milena"}
+{
+  "mainNav": {
+    "logo": {
+      "img": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Mcdonalds-90s-logo.svg",
+      "link": "home"
+    },
+    "links": [
+      {
+        "label": "Our Menu",
+        "links": [
+          {
+            "label": "Burgers",
+            "href": "burger"
+          },
+          {
+            "label": "Drinks and desserts",
+            "href": "drink"
+          },
+          {
+            "label": "In Family",
+            "href": "family"
+          }
+        ]
+      },
+      {
+        "label": "About our food",
+        "links": [
+          {
+            "label": "Commitment to Quality",
+            "href": "Aboutfood1"
+          },
+          {
+            "label": "Quality food",
+            "href": "aboutfood2"
+          },
+          {
+            "label": "Our food philosophy",
+            "href": "aboutfood3"
+          }
+        ]
+      },
+      {
+        "label": "Company",
+        "links": [
+          {
+            "label": "Opportunities",
+            "href": ""
+          },
+          {
+            "label": "Work in local",
+            "href": ""
+          },
+          {
+            "label": "Work in office",
+            "href": ""
+          }
+        ]
+      },
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "About us",
+        "href": "/"
+      }
+    ]
+  }
+}

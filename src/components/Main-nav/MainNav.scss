@@ -1,0 +1,267 @@
+@import '../shared/main.scss';
+
+.main-menu{
+	&__nav{
+		width: 100%;
+		height: 5vh;
+		display: flex;
+		cursor: pointer;
+		font-family: $font-family;
+
+		@include large{
+			width: 100%;
+			height: 100px;
+			position: relative;
+			background: linear-gradient(to left, $primaryColor, $secondaryColor); 
+		}
+	}
+
+	&__nav-bar{
+		width: 100%;
+		background: linear-gradient(to left, $primaryColor, $secondaryColor);
+		position: absolute;
+		z-index: 3;
+
+		@include large{
+			display: block;
+			background: unset;
+			width: 150px;
+			height: 100%;
+		}
+	}
+
+	&__logo{
+		&-container{
+			position: absolute;
+			text-align: center;
+			top: 2px;
+			left: 50%;
+
+			@include large{
+				position: unset;
+				text-align: unset;
+				margin-left: 50px;
+			}
+		}
+		
+		&-image{
+			width: 50px;
+			height: 50px;
+			margin: 0 auto;
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			@include large{
+				width: 100%;
+				height: 100%;
+			}
+		}
+		&-link{
+			position: absolute;
+			width: 50px;
+			height: 50px;
+
+			@include large{
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+	&__hamburger{
+		width: 50px;
+		height: 50px;
+		position: relative;
+		border: none;
+		background-color: transparent;
+		padding: 0;
+		top: 4px;
+		left: 20px;
+
+		@include large{
+			display: none;
+		}
+
+		&:focus{
+			border: 0.3px solid yellow;
+		}
+
+		&-line{
+			position: absolute;
+			width: 40px;
+			height: 5px;
+			top: 2px;
+			left: 2px;
+			background: white;
+			border-radius: 2px;
+			margin: 2px;
+
+			&-first{
+				top: 0px;
+			}
+
+			&-middle{
+				top: 18px;
+			}
+
+			&-last{
+				top: 36px;
+			}
+		}
+
+		&--clicked{
+			.main-menu__hamburger-line{
+				background: $primaryColor;
+				transition: 400ms linear;
+			}
+
+			.main-menu__hamburger-line-first{
+				top: 18px;
+				transform: rotate(45deg);
+			}
+
+			.main-menu__hamburger-line-middle{
+				opacity: 0;
+			}
+
+			.main-menu__hamburger-line-last{
+				top: 18px;
+				transform: rotate(-45deg);			
+			}
+		}
+	}
+
+	&__list{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 0;
+		background-color: $grayTertiaryColor;
+		position: relative;
+		transition: 400ms linear;
+		top: 0;
+		font-size: 40px;
+		overflow: auto;
+		text-align: left;
+
+		&--activate{
+			top: 50px;
+			width: 100%;
+			height: 800px;
+		}
+
+		@include large{
+			flex-direction: row;
+			background-color: unset;
+			position: absolute;
+			top: 0;
+			padding-left: 150px;
+			width: 85%;
+			height: 100%;
+			font-size: 25px;
+			transition: unset;
+		}
+
+		&__item-link{
+			&:hover{
+				background-color: $grayPrimaryColor;
+			}	
+		}
+
+		&-item{
+			width: 100%;
+			z-index: 1;
+		}
+
+		&__subitem-link{
+			width: 100%;
+			height: 100%;
+			display: block;
+			text-decoration: none;
+			color: black;
+			font-size: 30px;
+			padding-top: 20px;
+			text-align: center;
+			margin: 0;
+
+			@include large{
+				height: unset;
+				text-align: left;
+				display: unset;
+			}
+		}
+
+		&__link-item{
+			width: 100%;
+			display: block;
+			padding-left: 20px;
+			text-decoration: none;
+			color: black;
+
+			&:hover{
+				color:$redColor;
+				background-color: $grayPrimaryColor;
+			}
+
+			@include large{
+				margin-top: 11%;
+
+				&:hover{
+					color: $grayTertiaryColor;
+					background-color: unset;
+					text-decoration: underline;
+				}
+			}	
+		}
+
+		&-item-button{
+			width: 100%;
+			height: 100%;
+			background-color: transparent;
+			font-size: 35px;
+			border: none;
+			text-align: left;	
+			border-bottom: 1px solid black;
+			padding: 15px;
+			color: black;
+			padding-top: 30px;
+    	padding-bottom: 30px;
+
+			&:hover{
+				color: red;
+				background-color: $grayPrimaryColor;
+			}
+
+			@include large{
+				border-bottom: unset;
+				font-size: 20px;
+				text-align: center;
+				padding: 0;
+				&:hover{
+					background-color: unset;
+					color: white;
+				}
+			}
+		}
+		
+		&__link{
+			width: 100%;
+			background-color: $graySecondaryColor;
+			will-change: max-height;
+			overflow: hidden;
+			height: auto;
+			max-height: 0;
+			transition: max-height 400ms linear;
+			
+			&--activate{
+				max-height: 500px;
+
+				@include large{
+					position: fixed;
+					width: 244px;
+				}
+			}
+		}
+	}
+}
