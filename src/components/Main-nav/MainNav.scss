@@ -12,20 +12,15 @@
 			width: 100%;
 			height: 100px;
 			position: relative;
-			//background: #f9c833;
-			background: #c21500;  /* fallback for old browsers */
-			background: -webkit-linear-gradient(left, #ffc500, #c21500);  /* Chrome 10-25, Safari 5.1-6 */
-			background: linear-gradient(to left, #ffc500, #c21500); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+			background: -webkit-linear-gradient(left, $primaryColor, $secondaryColor);
+			background: linear-gradient(to left, $primaryColor, $secondaryColor); 
 		}
 	}
 
 	&__nav-bar{
 		width: 100%;
-		//background: #d5392e;
-		background: #c21500;  /* fallback for old browsers */
-		background: -webkit-linear-gradient(left, #ffc500, #c21500);  /* Chrome 10-25, Safari 5.1-6 */
-		background: linear-gradient(to left, #ffc500, #c21500);
+		background: -webkit-linear-gradient(left, $primaryColor, $secondaryColor);
+		background: linear-gradient(to left, $primaryColor, $secondaryColor);
 		position: absolute;
 		z-index: 3;
 
@@ -110,7 +105,7 @@
 
 		&--clicked{
 			.main-menu__hamburger-line{
-				background: #f9c833;
+				background: $primaryColor;
 				transition: 400ms linear;
 			}
 
@@ -135,7 +130,7 @@
 		flex-direction: column;
 		width: 100%;
 		height: 0;
-		background-color: #ddd;
+		background-color: $grayTertiaryColor;
 		position: relative;
 		transition: 400ms linear;
 		top: 0;
@@ -163,14 +158,13 @@
 
 		&__item-link{
 			&:hover{
-				background-color: rgb(156, 152, 152);
+				background-color: $grayPrimaryColor;
 			}	
 		}
 
 		&-item{
 			width: 100%;
 			z-index: 1;
-			//background: #ddd;	
 		}
 
 		&__subitem-link{
@@ -199,15 +193,15 @@
 			color: black;
 
 			&:hover{
-				color:#d5392e;
-				background-color: rgb(156, 152, 152);
+				color:$redColor;
+				background-color: $grayPrimaryColor;
 			}
 
 			@include large{
 				margin-top: 11%;
 
 				&:hover{
-					color: #ddd;
+					color: $grayTertiaryColor;
 					background-color: unset;
 					text-decoration: underline;
 				}
@@ -229,7 +223,7 @@
 
 			&:hover{
 				color: red;
-				background-color: rgb(156, 152, 152);
+				background-color: $grayPrimaryColor;
 			}
 
 			@include large{
@@ -246,7 +240,7 @@
 		
 		&__link{
 			width: 100%;
-			background-color: rgb(185, 185, 185);
+			background-color: $graySecondaryColor;
 			will-change: max-height;
 			overflow: hidden;
 			height: auto;
