@@ -85,6 +85,5 @@ Data Structure
 }
 ```
 
-
 ## User Interactions
 - The user can click the CTA to be redirected to the provided URL.
