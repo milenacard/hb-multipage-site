@@ -4,7 +4,8 @@ div.main-menu__nav-bar
     div.main-menu__hamburger-line.main-menu__hamburger-line-middle
     div.main-menu__hamburger-line.main-menu__hamburger-line-last
   div.main-menu__logo-container
-    img.main-menu__logo-image(src=mainNav.logo.link, alt=mainNav.logo.img)
+    img.main-menu__logo-image(src = mainNav.logo.img)
+    a.main-menu__logo-link(href = mainNav.logo.link)
 ul.main-menu__list
     each element in mainNav.links
       if Object.keys(element).includes('href')
