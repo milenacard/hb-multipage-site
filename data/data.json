@@ -2,7 +2,7 @@
   "mainNav": {
     "logo": {
       "img": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Mcdonalds-90s-logo.svg",
-      "link": "home.html"
+      "link": "home"
     },
     "links": [
       {
@@ -10,15 +10,15 @@
         "links": [
           {
             "label": "Burgers",
-            "href": "burger.html"
+            "href": "burger"
           },
           {
             "label": "Drinks and desserts",
-            "href": "drink.html"
+            "href": "drink"
           },
           {
             "label": "In Family",
-            "href": "family.html"
+            "href": "family"
           }
         ]
       },
@@ -27,15 +27,15 @@
         "links": [
           {
             "label": "Commitment to Quality",
-            "href": "Aboutfood1.html"
+            "href": "Aboutfood1"
           },
           {
             "label": "Quality food",
-            "href": "aboutfood2.html"
+            "href": "aboutfood2"
           },
           {
             "label": "Our food philosophy",
-            "href": "aboutfood3.html"
+            "href": "aboutfood3"
           }
         ]
       },
