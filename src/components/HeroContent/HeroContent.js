@@ -10,6 +10,7 @@ export class HeroContent {
 
   createNode (data, template) {
     const parser = new DOMParser()
+    // expres operator, desing
     return parser.parseFromString(template(data), 'text/html').body.children[0]
   }
 
