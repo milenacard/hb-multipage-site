@@ -11,7 +11,7 @@ export class HeroContent {
 
   createNode (data, template) {
     const parser = new DOMParser()
-    // expres operator, desing
+    // matchmedia: hacer mediaQuery en el JS
     return parser.parseFromString(template(data), 'text/html').body.children[0]
   }
 
