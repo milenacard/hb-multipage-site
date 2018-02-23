@@ -6,6 +6,7 @@ import './HeroContent.scss'
 export class HeroContent {
   constructor () {
     this.node = this.createNode(data, template)
+    this.setDomContainer()
   }
 
   createNode (data, template) {

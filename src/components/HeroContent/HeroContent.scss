@@ -1,9 +1,7 @@
 .hero{
 	&__header{
-		&-container{
-			.title{
-				color: red;
-			}
+		&-title{
+			color: red;
 		}
 	}
 }

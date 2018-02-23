@@ -75,15 +75,15 @@
     },
     "images": {
       "small": {
-        "url": "../asset/hero-small.png",
+        "url": "../assets/hero-small.png",
         "description": "This is the image for small viewport"
       },
       "medium": {
-        "url": "../asset/hero-medium.png",
+        "url": "../assets/hero-medium.png",
         "description": "This is the image for medium viewport"
       },
       "large": {
-        "url": "../asset/hero-large.png",
+        "url": "../assets/hero-large.png",
         "description": "This is the image for large viewport"
       }
     }
