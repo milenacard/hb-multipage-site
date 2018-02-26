@@ -1,3 +1,5 @@
+@import '../shared/main.scss';
+
 .hero{
 	height: 100vh;
 	position: relative;
@@ -12,26 +14,53 @@
 			align-items: center;
 			flex-direction: column;
 			top: 10%;
+
+			@include medium{
+				padding: 15px;
+			}
 		}
 
 		&-title{
 			color: white;
-			font-size: 30px;
+			font-size: 15px;
 			padding: 10px;
+
+			@include medium{
+				font-size: 25px;
+				padding: 10px;
+			}
 		}
 
 		&-description{
 			color: white;
-			font-size: 50px;
+			font-size: 40px;
 			padding: 10px;
+
+			@include medium{
+				font-size: 70px;
+				padding: 10px;
+			}
 		}
 
 		&-link{
-			width: 150px;
-			height: 35px;
-			background-color: aqua;
+			width: 105px;
+			color: white;
+			background: rgb(74, 73, 73);
 			border-radius: 2%;
-    	text-align: center;
+			text-align: center;
+			padding: 10px;
+			text-decoration: none;
+
+			&:hover{
+				color: $primaryColor;
+				text-decoration: underline;
+			}
+
+			@include medium{
+				width: 135px;
+				font-size: 20px;
+				padding: 10px;
+			}
 		}
 	}
 
