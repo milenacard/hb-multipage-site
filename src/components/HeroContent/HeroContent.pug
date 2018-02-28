@@ -4,7 +4,7 @@ section.hero
     h2.hero__header-description #{heroContent.description}
     a.hero__header-link(href = heroContent.cta.url) #{heroContent.cta.label}
   picture.hero__pictures
-    source(media= '(min-width: 320px) and (max-width: 639px)', srcset = heroContent.images.small.url)
-    source(media= '(min-width: 640px) and (max-width: 1023px)', srcset = heroContent.images.medium.url)
-    source(media= '(min-width: 1024px)', srcset = heroContent.images.large.url)
+    source(media= '(max-width:' + smallMin + ') and (max-width:'+ smallMax + ')', srcset = heroContent.images.small.url)
+    source(media= '(max-width:' + mediumMin + ') and (max-width:'+ mediumMax + ')', srcset = heroContent.images.medium.url)
+    source(media= '(min-width:' + large + ')', , srcset = heroContent.images.large.url)
     img(alt = heroContent.images.large.description).hero__image-container

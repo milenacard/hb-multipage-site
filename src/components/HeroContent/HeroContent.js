@@ -2,6 +2,7 @@
 import template from './HeroContent.pug'
 import data from '../../../data/data.json'
 import './HeroContent.scss'
+import breakpoints from './../shared/Breakpoints.js'
 
 export class HeroContent {
   constructor () {
@@ -11,8 +12,8 @@ export class HeroContent {
 
   createNode (data, template) {
     const parser = new DOMParser()
-    // matchmedia: hacer mediaQuery en el JS
-    return parser.parseFromString(template(data), 'text/html').body.children[0]
+    const ObjectMerge = Object.assign({}, data, breakpoints.width)
+    return parser.parseFromString(template(ObjectMerge), 'text/html').body.children[0]
   }
 
   setDomContainer () {
