@@ -1,0 +1,10 @@
+section.hero
+  div.hero__header-container
+    h1.hero__header-title #{heroContent.header}
+    h2.hero__header-description #{heroContent.description}
+    a.hero__header-link(href = heroContent.cta.url) #{heroContent.cta.label}
+  picture.hero__pictures
+    source(media= '(max-width:'+ smallMax + ')', srcset = heroContent.images.small.url)
+    source(media= '(min-width:' + mediumMin + ') and (max-width:'+ mediumMax + ')', srcset = heroContent.images.medium.url)
+    source(media= '(min-width:' + large + ')', srcset = heroContent.images.large.url)
+    img(alt = heroContent.images.large.description).hero__image-container

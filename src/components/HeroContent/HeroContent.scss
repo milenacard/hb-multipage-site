@@ -1,0 +1,92 @@
+@import '../shared/main.scss';
+
+.hero{
+	height: 100vh;
+	position: relative;
+
+	&__header{
+		&-container{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: 1;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			top: 10%;
+
+			@include medium{
+				padding: 15px;
+			}
+		}
+
+		&-title{
+			color: white;
+			font-size: 15px;
+			padding: 10px;
+
+			@include medium{
+				font-size: 25px;
+				padding: 10px;
+			}
+
+			@include large{
+				font-size: 60px;
+				padding: 15px;
+			}
+		}
+
+		&-description{
+			color: white;
+			font-size: 40px;
+			padding: 10px;
+
+			@include medium{
+				font-size: 70px;
+				padding: 10px;
+			}
+
+			@include large{
+				font-size: 170px;
+				padding: 15px;
+			}
+		}
+
+		&-link{
+			width: 105px;
+			color: white;
+			background: rgb(74, 73, 73);
+			border-radius: 2%;
+			text-align: center;
+			padding: 10px;
+			text-decoration: none;
+
+			&:hover{
+				color: $primaryColor;
+				text-decoration: underline;
+			}
+
+			@include medium{
+				width: 135px;
+				font-size: 20px;
+				padding: 10px;
+			}
+
+			@include large{
+				width: 224px;
+				font-size: 30px;
+				padding: 15px;
+				background-color: red;
+			}
+
+		}
+	}
+
+	&__image{
+
+		&-container{
+			width: 100%;
+			position: absolute;
+		}		
+	}
+}
