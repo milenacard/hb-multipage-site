@@ -26,6 +26,7 @@
 			color: white;
 			font-size: 15px;
 			padding: 10px;
+			text-align: center;
 
 			@include medium{
 				font-size: 25px;
@@ -42,6 +43,7 @@
 			color: white;
 			font-size: 40px;
 			padding: 10px;
+			text-align: center;
 
 			@include medium{
 				font-size: 70px;
