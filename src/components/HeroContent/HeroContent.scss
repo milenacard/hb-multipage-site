@@ -1,9 +1,11 @@
 @import '../shared/main.scss';
 
-.hero{
+.heroContent{
 	height: 100vh;
 	position: relative;
+}
 
+.hero{
 	&__header{
 		&-container{
 			width: 100%;
