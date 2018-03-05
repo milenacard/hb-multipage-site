@@ -15,6 +15,7 @@ export class HeroDecorative {
     this.decorativeContainer = this.node.querySelector('.hero__image-container')
     this.setImages()
     this.matchMedia()
+    this.setEventMatchMedia()
   }
 
   createNode (data, template) {
@@ -57,6 +58,26 @@ export class HeroDecorative {
     } else {
       this.decorativeContainer.style.backgroundImage = this.images.small
     }
+  }
+
+  setEventMatchMedia () {
+    const mediaLarge = window.matchMedia(this.width.large)
+    const mediaMedium = (window.matchMedia(this.width.mediumMin) && window.matchMedia(this.width.mediumMax))
+    const mediaSmall = (window.matchMedia(this.width.smallMin) && window.matchMedia(this.width.smallMax))
+
+    mediaLarge.addListener(() => {
+      this.changedBackground(this.images.large)
+    })
+    mediaMedium.addListener(() => {
+      this.changedBackground(this.images.medium)
+    })
+    mediaSmall.addListener(() => {
+      this.changedBackground(this.images.small)
+    })
+  }
+
+  changedBackground (image) {
+    this.decorativeContainer.style.backgroundImage = image
   }
 }
 

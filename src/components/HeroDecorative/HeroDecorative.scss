@@ -1,4 +1,5 @@
-@import '../shared/main.scss';
+@import '../shared/base.scss';
+@import '../shared/variables.scss';
 
 .heroDecorative{
 	height: 100vh;
@@ -57,7 +58,7 @@
 		&-link{
 			width: 105px;
 			color: white;
-			background: rgb(74, 73, 73);
+			background: $gray;
 			border-radius: 2%;
 			text-align: center;
 			padding: 10px;
