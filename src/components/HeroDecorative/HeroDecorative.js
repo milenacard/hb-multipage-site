@@ -29,11 +29,9 @@ export class HeroDecorative {
 
   setWidth () {
     this.width.large = '(min-width:' + breakpoints.width.large + ')'
-    this.width.small = '(min-width:' + breakpoints.width.smallMin + ')'
-    this.width.mediumMin = '(min-width:' + breakpoints.width.mediumMin + ')'
-    this.width.mediumMax = '(min-width:' + breakpoints.width.mediumMax + ')'
+    this.width.small = '(max-width:' + breakpoints.width.smallMax + ')'
+    this.width.medium = '(min-width:' + breakpoints.width.mediumMin + ')' + 'and (max-width:' + breakpoints.width.mediumMax + ')'
   }
-
   setUrlImages (data) {
     this.images.small = `url('${data.heroDecorative.images.small.url}')`
     this.images.medium = `url('${data.heroDecorative.images.medium.url}')`
@@ -62,8 +60,9 @@ export class HeroDecorative {
 
   setEventMatchMedia () {
     const mediaLarge = window.matchMedia(this.width.large)
-    const mediaMedium = (window.matchMedia(this.width.mediumMin) && window.matchMedia(this.width.mediumMax))
-    const mediaSmall = (window.matchMedia(this.width.smallMin) && window.matchMedia(this.width.smallMax))
+    const mediaMedium = window.matchMedia(this.width.medium)
+    console.log(window.matchMedia(this.width.medium))
+    const mediaSmall = window.matchMedia(this.width.small)
 
     mediaLarge.addListener(() => {
       this.changedBackground(this.images.large)
