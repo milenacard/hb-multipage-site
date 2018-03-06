@@ -1,7 +1,7 @@
 @import '../shared/base.scss';
 @import '../shared/variables.scss';
 
-.heroContent{
+.heroDecorative{
 	height: 100vh;
 	position: relative;
 }
@@ -27,7 +27,6 @@
 			color: white;
 			font-size: 15px;
 			padding: 10px;
-			text-align: center;
 
 			@include medium{
 				font-size: 25px;
@@ -44,7 +43,6 @@
 			color: white;
 			font-size: 40px;
 			padding: 10px;
-			text-align: center;
 
 			@include medium{
 				font-size: 70px;
@@ -60,7 +58,7 @@
 		&-link{
 			width: 105px;
 			color: white;
-			background: rgb(74, 73, 73);
+			background: $gray;
 			border-radius: 2%;
 			text-align: center;
 			padding: 10px;
@@ -91,7 +89,10 @@
 
 		&-container{
 			width: 100%;
+			height: 100%;
 			position: absolute;
+			background-repeat: no-repeat;
+			background-size: 100%;
 		}		
 	}
 }

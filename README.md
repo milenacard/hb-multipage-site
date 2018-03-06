@@ -87,3 +87,29 @@ Data Structure
 
 ## User Interactions
 - The user can click the CTA to be redirected to the provided URL.
+
+### Hero (Decorative Images)
+This component can be included on any page and should include images that should be treated as decorative images instead of content images, meaning that you need to implement it using background in CSS instead of using the picture or img elements.
+
+Data Structure
+```
+{
+  "header": "",
+  "description": "",
+  "cta": {
+    "label": "",
+    "url": ""
+  },
+  "images": {
+    "small": {
+      "url": ""
+    },
+    "medium": {
+      "url": ""
+    },
+    "large": {
+      "url": ""
+    }
+  }
+}
+```

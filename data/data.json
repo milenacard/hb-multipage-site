@@ -87,5 +87,24 @@
         "description": "This is the image for large viewport"
       }
     }
+  },
+  "heroDecorative":{
+    "header": "Order on your time & pick up on your terms",
+    "description": "MOBILE ORDER",
+    "cta": {
+      "label": "LEARN MORE",
+      "url": "https://www.mcdonalds.com/us/en-us/mobile-order-and-pay.html"
+    },
+    "images": {
+      "small": {
+        "url": "../assets/hero-small.png"
+      },
+      "medium": {
+        "url": "../assets/hero-medium.png"
+      },
+      "large": {
+        "url": "../assets/hero-large.png"
+      }
+    }
   }
 }
