@@ -61,7 +61,6 @@ export class HeroDecorative {
   setEventMatchMedia () {
     const mediaLarge = window.matchMedia(this.width.large)
     const mediaMedium = window.matchMedia(this.width.medium)
-    console.log(window.matchMedia(this.width.medium))
     const mediaSmall = window.matchMedia(this.width.small)
 
     mediaLarge.addListener(() => {
